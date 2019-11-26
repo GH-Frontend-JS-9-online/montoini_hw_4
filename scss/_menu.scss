@@ -43,9 +43,11 @@
 		font-size: 1.1em;
 		font-weight: 400;
 		margin-bottom: 100%;
+		-webkit-transition: 3s;
+		transition: 3s;
 
 		&:hover{
-			background-color: rgba(255, 255, 255, 0.7);
+			background-color: rgba(255, 255, 255, 0.8);
 			color: #15a4fa;
 		}
 	}

@@ -27,12 +27,57 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	width: 70%;
-	margin: 0 1em 4em 1em;
+	margin: 0 1em 6em 1em;
 
 	&__img{
-		margin: 1.3em;
+		cursor: pointer;
+		margin: 1.2em;
+		text-align: center;
+		overflow: hidden;
+	}
+
+	.gradient {
+		display: inline-block;
+		position: relative;
+	}
+
+	.gradient:after {
+		content: "";
+		opacity: 0;
+		transition: opacity 0.5s ease-in-out;
+	}
+
+	.gradient:hover:after {
+		display: block;
+		width: 100%;
+		height: 100%;    
+		position: absolute;
+		top: 0;    
+		left: 0;   
+		background: transparent;
+		background: #15a4fa; 
+		opacity: 0.7;
+	}
+
+	.gradient:before {
+		content: "";
+		opacity: 0;    
+		transition: opacity 0.5s;
+	}
+
+	.gradient:hover:before {
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;    
+		z-index: 100;    
+		background: url(../images/icons.png) no-repeat center;
+		opacity: 1;
 	}
 }
+
 
 @media (min-width: 1024px) and (max-width: 1320px) {
 	.pictureBlock{

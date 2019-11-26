@@ -34,6 +34,7 @@
 		border-radius: 0.3em;
 		border: 1px solid #999999;
 		background-color: transparent;
+		color: #999999;
 		font-size: 0.94em;
 		font-weight: 400;
 		letter-spacing: 0.38px;
@@ -75,18 +76,26 @@
 			background-color: transparent;
 			color: #ffffff;
 			font-size: 1.1em;
-			margin-bottom: 80%; 
+			margin-bottom: 80%;
+			-webkit-transition: 3s;
+			transition: 3s;
 
 			&:hover{
-				background-color: #fff;
+				background-color: rgba(255, 255, 255, 0.8);
 				color: #15a4fa; 
 			}
 		}
     }
 }
 
-@media (max-width: 800px) and (min-width: 310px) {
-	.endBlock form, .choose{
-		transform: scale(0.8);
+@media (max-width: 800px) and (min-width: 376px) {
+	.endBlock__form {
+		transform: scale(0.9);
+	}
+}
+
+@media (max-width: 375px) and (min-width: 310px) {
+	.endBlock__form {
+		transform: scale(0.7);
 	}
 }
