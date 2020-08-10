@@ -1,3 +1,12 @@
+%styleimg{
+	background-size: cover;
+    repeat: no-repeat;
+    position: relative;
+    width: 22em;
+    height: 16em;
+    margin: 1.5em;
+}
+
 .gallery__galleryBlock{
 	display: flex;
 	flex-direction: column;
@@ -27,15 +36,74 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	width: 70%;
-	margin: 0 1em 6em 1em;
+	margin-bottom: 2em;
 
-	&__img{
-		cursor: pointer;
-		margin: 1.2em;
-		text-align: center;
-		overflow: hidden;
+	&__img-1, &__img-2, &__img-3, &__img-4, &__img-5, &__img-6 {
+		@extend %styleimg;
 	}
 
+	&__img-1 {
+		background: url(../images/picture-1.png);
+	}
+
+	&__img-2 {
+		background: url(../images/picture-2.png);
+	}
+
+	&__img-3 {
+		background: url(../images/picture-3.png);
+	}
+
+	&__img-4 {
+		background: url(../images/picture-4.png);
+	}
+
+	&__img-5 {
+		background: url(../images/picture-5.png);
+	}
+
+	&__img-6 {
+		background: url(../images/picture-6.png);
+	}
+
+	&__gradient{
+		background-color: rgba(21, 164, 250, 0); 
+		position: absolute;
+		z-index: 2;
+		width: 22em;
+    	height: 16em;
+    	cursor: pointer;
+
+    	&:hover{
+    		background-color: rgba(21, 164, 250, 0.7);
+    	}
+	}
+
+	&__button{
+		display: block;
+		position: absolute;
+		z-index: 999;
+		margin-top: 32%;
+		margin-left: 40%;
+		opacity: 0;
+
+		&:hover{
+			opacity: 1;
+		}
+	}
+
+	&__btn{
+		height: 2.5em;
+		width: 2.5em;
+		background-color: rgba(21, 164, 250, 0);
+		border-radius: 0.19em;
+		border: 1px solid #fff;
+		cursor: pointer;
+    	color: #fff;
+	}
+}
+
+	/*
 	.gradient {
 		display: inline-block;
 		position: relative;
@@ -77,7 +145,7 @@
 		opacity: 1;
 	}
 }
-
+*/
 
 @media (min-width: 1024px) and (max-width: 1320px) {
 	.pictureBlock{
